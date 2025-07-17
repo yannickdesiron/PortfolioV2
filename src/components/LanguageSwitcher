@@ -1,0 +1,21 @@
+// src/components/LanguageSwitcher.tsx
+'use client';
+
+import { usePathname, useRouter } from 'next/navigation';
+
+export default function LanguageSwitcher() {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  function switchLocale(locale) {
+    const newPath = pathname.replace(/^\/(en|nl)/, `/${locale}`);
+    router.push(newPath);
+  }
+
+  return (
+    <div className="flex gap-2">
+      <button onClick={() => switchLocale('en')}>EN</button>
+      <button onClick={() => switchLocale('nl')}>NL</button>
+    </div>
+  );
+}
