@@ -1,10 +1,11 @@
-// src/app/[locale]/layout.tsx
 import '../globals.css';
-import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { routing } from '../../i18n/routing';
 import type { ReactNode } from 'react';
+
+import Navbar from '@/components/Navbar';  // Import your Navbar here
+import { ThemeProvider } from 'next-themes';
 
 const locales = ['en', 'nl'];
 
@@ -17,23 +18,21 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  console.log('[layout.tsx] Resolved locale:', locale);
-
   if (!locales.includes(locale)) {
-    console.log('[layout.tsx] Locale not found, throwing 404');
     notFound();
   }
 
   const messages = await getMessages({ locale });
 
-  console.log('[layout.tsx] Loaded messages:', messages);
-
   return (
     <html lang={locale}>
-      <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+      <body className="min-h-screen bg-background text-foreground">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Navbar />        {/* <-- Add Navbar here */}
+            <main>{children}</main> {/* Wrap page content */}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

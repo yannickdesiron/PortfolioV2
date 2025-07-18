@@ -1,10 +1,13 @@
 // src/app/[locale]/page.tsx
-import { useLocale, useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Link} from '@/i18n/navigation';
 
-export default function HomePage() {
-  const t = useTranslations('hero');
-   const locale = useLocale();
+export default async function HomePage(props: {
+  params: Promise<{ locale: string }>;
+}) {
+  const params = await props.params;
+  const { locale } = params;
+  const t = await getTranslations({ locale, namespace: 'hero' });
 
   console.log('[page] locale:', locale);
   console.log('[page] title:', t('title'));
