@@ -46,7 +46,7 @@ export default function Projects({ title }: ProjectsProps) {
       technologies: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'next-intl', 'next-themes'],
       screenshot: '/images/projects/projectportfolio2.png', // You'll need to add this image
       liveUrl: 'https://your-current-portfolio.com', // Replace with actual URL
-      githubUrl: 'https://github.com/yourusername/portfolio-v2', // Replace with actual URL
+      githubUrl: 'https://github.com/yourusername/projectPortfolio2', // Replace with actual URL
       bgColor: 'bg-zinc-200 dark:bg-zinc-800' // Zinc variant (using 800 as requested)
     }
   ];
