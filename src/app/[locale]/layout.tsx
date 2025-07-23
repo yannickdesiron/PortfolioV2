@@ -6,6 +6,7 @@ import type { ReactNode } from 'react';
 
 import Navbar from '@/components/Navbar';  // Import your Navbar here
 import { ThemeProvider } from 'next-themes';
+import Footer from '@/components/Footer';
 
 const locales = ['en', 'nl'];
 
@@ -25,12 +26,18 @@ export default async function LocaleLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className="min-h-screen bg-background text-foreground">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider 
+          attribute="class" 
+          defaultTheme="system" 
+          enableSystem
+          disableTransitionOnChange={false}
+        >
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Navbar />        {/* <-- Add Navbar here */}
             <main>{children}</main> {/* Wrap page content */}
+            <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

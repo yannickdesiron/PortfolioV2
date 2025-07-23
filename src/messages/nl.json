@@ -1,6 +1,147 @@
 {
+  "nav": {
+    "home": "Home",
+    "about": "Over",
+    "projects": "Projecten",
+    "experiences": "Ervaringen",
+    "resume": "CV",
+    "theme": {
+      "light": "Licht",
+      "dark": "Donker"
+    }
+  },
   "hero": {
-    "title": "Hoi, ik ben Yannick",
-    "subtitle": "Een ontwikkelaar met een passie voor cleane UI."
+    "title": "Hey, ik ben",
+    "name": "Yannick Desiron",
+    "subtitle": "Een full stack ontwikkelaar uit Antwerpen.",
+    "cta": "Laten we samen iets moois bouwen.",
+    "buttonText": "Contacteer Me",
+    "imageAlt": "Portret van Yannick Desiron"
+  },
+  "about": {
+    "title": "Over Mij",
+    "description": "Hoi! Ik ben Yannick Desiron, een gedreven full stack developer in opleiding met een unieke achtergrond als professioneel basketballer gedurende 15 jaar. Ik speelde voor topteams in België, won meerdere nationale titels en nam deel aan de Champions League en FIBA Europe Cup.\n\nMijn tijd als topsporter heeft mij discipline, doorzettingsvermogen en het vermogen om te presteren onder druk bijgebracht — kwaliteiten die ik nu inzet in softwareontwikkeling. Teamspelen hebben mijn communicatievaardigheden en samenwerking versterkt, iets wat ik erg belangrijk vind in elk project.\n\nMomenteel rond ik mijn opleiding programmeren af en doe ik praktijkervaring op via een full stack developer stage. Ik ben gepassioneerd door het bouwen van schone, onderhoudbare en gebruiksvriendelijke webapplicaties met technologieën als React, Next.js, Angular en .NET.\n\nVloeiend in het Nederlands en Engels en met een goede beheersing van het Frans werk ik graag in internationale teams waar ik kan blijven leren en groeien. Buiten het programmeren blijft basketballen een grote passie en geniet ik van gamen en lezen—activiteiten die mij helpen ontspannen.\n\nIk kijk ernaar uit om de volgende stap in mijn IT-carrière te zetten en maak graag kennis — neem gerust contact op!"
+  },
+  "experiences": {
+    "title": "Ervaringen",
+    "basketball": {
+      "title": "Professionele Basketbalspeler",
+      "period": "2010 - 2025",
+      "achievement1": "2x Belgisch Kampioen, 1x Belgische Beker, 1x Supercup winnaar",
+      "achievement2": "Speelde voor Leuven Bears, Limburg United, Filou Oostende, Brussels Basketball",
+      "achievement3": "Deelname aan Champions League en FIBA Europe Cup",
+      "achievement4": "Ontwikkelde sterke vaardigheden in communicatie, discipline, teamwork en presteren onder druk",
+      "achievement5": "Regelmatig betrokken bij promoties, sponsor evenementen en pers momenten"
+    },
+    "internship": {
+      "title": "Stage — Full Stack Developer",
+      "period": "Juni 2025 - Juli 2025",
+      "achievement1": "Ontwikkelde een webapplicatie met .NET en Angular",
+      "achievement2": "Werkte in een Agile team met Azure DevOps",
+      "achievement3": "Implementeerde REST API integraties en component-gebaseerde frontend",
+      "achievement4": "Focus op kwaliteit, bruikbaarheid en schaalbaarheid"
+    },
+    "school": {
+      "title": "Thomas More, Lier — Graduaat Programmeren",
+      "period": "2023 - 2025",
+      "achievement1": "Opleiding in full stack development, webontwikkeling en databasebeheer",
+      "achievement2": "Ervaring met onder andere React, Angular, .NET Core, C#, TypeScript en SQL",
+      "achievement3": "Gewerkt in Agile teams met gebruik van GitHub en Azure DevOps",
+      "achievement4": "Gebruikt tools als Docker, Postman en Visual Studio",
+      "achievement5": "Schoolprojecten o.a. in React Native, .NET MAUI, Next.js en ASP.NET"
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Contact",
+      "location": "Antwerpen, België"
+    },
+    "links": {
+      "title": "Snelle Links",
+      "downloadCv": "CV Downloaden"
+    },
+    "social": {
+      "title": "Verbinden"
+    },
+    "backToTop": "Terug naar Boven",
+    "copyright": "Alle rechten voorbehouden.",
+    "builtWith": "Gebouwd met",
+    "using": "met behulp van"
+  },
+  "projects": {
+    "title": "Projecten"
+  },
+  "resume": {
+    "name": "Yannick Desiron",
+    "title": "Full Stack Developer",
+    "download": "Download PDF",
+    "summary": {
+      "title": "Professionele Samenvatting",
+      "content": "Hoogggemotiveerde full stack developer in opleiding met een unieke achtergrond als professioneel basketballer gedurende 15 jaar. Mijn sportcarrière heeft mij discipline, doorzettingsvermogen en presteren onder druk bijgebracht—kwaliteiten die ik nu inzet in softwareontwikkeling. Sterke communicatievaardigheden door teamwork en internationale competitie. Momenteel bezig met het afronden van programmeeropleiding met praktijkervaring via stages. Gepassioneerd door het bouwen van schone, onderhoudbare webapplicaties met moderne technologieën."
+    },
+    "experience": {
+      "title": "Ervaring",
+      "basketball": {
+        "title": "Professionele Basketbalspeler",
+        "period": "2010 - 2025",
+        "teams": "Leuven Bears, Limburg United, Filou Oostende, Brussels Basketball",
+        "achievement1": "2x Belgisch Kampioen, 1x Belgische Beker, 1x Supercup winnaar",
+        "achievement2": "Deelname aan Champions League en FIBA Europe Cup",
+        "achievement3": "Ontwikkelde sterke leiderschaps-, communicatie- en teamworkvaardigheden",
+        "achievement4": "Regelmatige betrokkenheid bij promoties, sponsor evenementen en media-optredens"
+      },
+      "internship": {
+        "title": "Full Stack Developer Stagiair",
+        "period": "Juni 2025 - Juli 2025",
+        "company": "Bedrijfsstage (aankomend)",
+        "achievement1": "Zal webapplicaties ontwerpen en ontwikkelen met .NET en Angular",
+        "achievement2": "Werken in Agile teams met Azure DevOps",
+        "achievement3": "REST API integraties en component-gebaseerde frontend opzetten",
+        "achievement4": "Focus op codekwaliteit, bruikbaarheid en schaalbaarheid"
+      }
+    },
+    "education": {
+      "title": "Onderwijs",
+      "thomasMore": {
+        "title": "Graduaat Programmeren",
+        "school": "Thomas More, Lier",
+        "period": "2022 - 2025",
+        "achievement1": "Volledige opleiding in full stack development en webontwikkeling",
+        "achievement2": "Expertise ontwikkeld in React, Angular, .NET Core, C# en TypeScript",
+        "achievement3": "Praktijkervaring met databases en databasebeheer",
+        "achievement4": "Teamprojecten met Agile methodologie en version control (GitHub)",
+        "achievement5": "Hands-on ervaring met ontwikkeltools zoals Docker, Postman en Visual Studio"
+      },
+      "leuven": {
+        "title": "Computer Science",
+        "school": "Hogeschool Leuven",
+        "period": "2010 - 2011",
+        "achievement1": "Fundamentele basis in informatica en programmeerconcepten",
+        "achievement2": "Eerste kennismaking met softwareontwikkeling en computersystemen"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "phone": "+32 4XX XX XX XX",
+      "email": "yannickdesiron@hotmail.com",
+      "address": "2530 Boechout"
+    },
+    "languages": {
+      "title": "Talen",
+      "dutch": "Nederlands",
+      "english": "Engels",
+      "french": "Frans",
+      "native": "Moedertaal",
+      "excellent": "Uitstekend",
+      "good": "Goed"
+    },
+    "skills": {
+      "title": "Technische Vaardigheden",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "devops": "DevOps & Tools",
+      "mobile": "Mobiel"
+    }
   }
 }
