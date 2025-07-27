@@ -1,4 +1,8 @@
+'use client'
+
 import React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 
 interface HeroProps {
@@ -12,6 +16,9 @@ interface HeroProps {
 }
 
 export default function Hero({ title, name, subtitle, cta, buttonText, imageSrc, imageAlt }: HeroProps) {
+  const pathname = usePathname();
+  const currentLocale = pathname.startsWith('/nl') ? 'nl' : 'en';
+  const baseUrl = currentLocale === 'nl' ? '/nl' : '/en';
   return (
     <section className="relative flex items-end w-full min-h-[500px] bg-gradient-to-br from-gray-50 to-gray-100 dark:from-slate-800 dark:to-slate-900">
       {/* Soft overlay for the entire section */}
@@ -35,8 +42,10 @@ export default function Hero({ title, name, subtitle, cta, buttonText, imageSrc,
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
               {cta}
             </p>
-            <Button className="mt-6" size="lg">
-              {buttonText}
+            <Button asChild className="mt-6" size="lg">
+              <Link href={`${baseUrl}/contact`}>
+                {buttonText}
+              </Link>
             </Button>
           </div>
 
@@ -63,8 +72,10 @@ export default function Hero({ title, name, subtitle, cta, buttonText, imageSrc,
             <p className="mt-4 text-base md:text-lg text-gray-600 dark:text-gray-400">
               {cta}
             </p>
-            <Button className="mt-6" size="lg">
-              {buttonText}
+            <Button asChild className="mt-6" size="lg">
+              <Link href={`${baseUrl}/contact`}>
+                {buttonText}
+              </Link>
             </Button>
           </div>
 

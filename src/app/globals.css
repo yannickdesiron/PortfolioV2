@@ -1,3 +1,22 @@
+/* Minimal animated underline for nav links */
+.nav-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 3px;
+  background: currentColor;
+  border-radius: 2px;
+  opacity: 0.7;
+  transform: scaleX(0);
+  transition: transform 0.25s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+}
+.nav-underline:hover::after,
+.nav-underline.underline-active::after {
+  transform: scaleX(1);
+}
 @import "tailwindcss";
 @import "tw-animate-css";
 

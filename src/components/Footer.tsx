@@ -88,10 +88,10 @@ export default function Footer() {
                   size="sm"
                   className="flex items-center gap-2"
                 >
-                  <a href="mailto:yannickdesiron@hotmail.com">
-                    <Mail className="h-4 w-4" />
+                  <Link href={`${baseUrl}/contact`}>
+                    {/* <Mail className="h-4 w-4" /> */}
                     Contact Me
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>

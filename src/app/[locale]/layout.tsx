@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar';  // Import your Navbar here
 import { ThemeProvider } from 'next-themes';
 import Footer from '@/components/Footer';
 import ChatBubble from '@/components/ChatBubble';
+import { Toaster } from 'sonner';
 
 const locales = ['en', 'nl'];
 
@@ -41,6 +42,7 @@ export default async function LocaleLayout({
             <Footer />
           </NextIntlClientProvider>
           <ChatBubble /> {/* ChatBubble component */}
+          <Toaster /> {/* Sonner Toaster for notifications */}
         </ThemeProvider>
       </body>
     </html>
