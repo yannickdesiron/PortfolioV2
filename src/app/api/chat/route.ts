@@ -9,7 +9,7 @@ const knowledgeDir = path.join(process.cwd(), "data", "knowledge");
 
 async function loadKnowledge() {
   const files = await fs.readdir(knowledgeDir);
-  let docs: { content: string; source: string }[] = [];
+  const docs: { content: string; source: string }[] = [];
   for (const file of files) {
     const filePath = path.join(knowledgeDir, file);
     const content = await fs.readFile(filePath, "utf8");
@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
   // Load and split knowledge
   const docs = await loadKnowledge();
   const splitter = new RecursiveCharacterTextSplitter({ chunkSize: 500, chunkOverlap: 50 });
-  let allChunks: { content: string; source: string }[] = [];
+  const allChunks: { content: string; source: string }[] = [];
   for (const doc of docs) {
     const splits = await splitter.splitText(doc.content);
     allChunks.push(...splits.map((chunk) => ({ content: chunk, source: doc.source })));
@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
   const bestChunk = allChunks[bestIdx];
 
   // Always use the LLM to answer, even for low similarity
-  let context = bestChunk ? bestChunk.content : '';
+  const context = bestChunk ? bestChunk.content : '';
   if (!context) {
     // If for some reason no context is found, fallback
     return NextResponse.json({ reply: "Sorry, I don't have an answer for that. Please contact me via the contact form or email." });

@@ -94,7 +94,7 @@ export default function ChatBubble() {
             max-sm:fixed max-sm:inset-0 max-sm:w-full max-sm:max-w-full max-sm:min-h-screen max-sm:rounded-none max-sm:z-50">
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800">
-              <span className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Chat with Yannick's AI</span>
+              <span className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Chat with Yannick&aposs AI</span>
               <button onClick={() => setOpen(false)} className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
                 <X className="h-5 w-5" />
               </button>
