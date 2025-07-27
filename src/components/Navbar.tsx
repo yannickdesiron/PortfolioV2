@@ -37,14 +37,16 @@ export default function Navbar() {
 
 
 
-  // Simple nav links with translations
+  // Simple nav links with translations (excluding contact)
+  const baseUrl = pathname.startsWith('/nl') ? '/nl' : '/en';
   const navLinks = [
-    { href: pathname.startsWith('/nl') ? '/nl' : '/en', label: t('home') },
-    { href: (pathname.startsWith('/nl') ? '/nl' : '/en') + '#about', label: t('about') },
-    { href: (pathname.startsWith('/nl') ? '/nl' : '/en') + '#experiences', label: t('experiences') },
-    { href: (pathname.startsWith('/nl') ? '/nl' : '/en') + '#projects', label: t('projects') },
-    { href: pathname.startsWith('/nl') ? '/nl/resume' : '/en/resume', label: t('resume') },
+    { href: baseUrl, label: t('home') },
+    { href: baseUrl + '#about', label: t('about') },
+    { href: baseUrl + '#experiences', label: t('experiences') },
+    { href: baseUrl + '#projects', label: t('projects') },
+    { href: baseUrl + '/resume', label: t('resume') },
   ];
+  const contactHref = baseUrl + '/contact';
 
   // Handle light/dark toggle
   function toggleTheme() {
@@ -74,19 +76,29 @@ export default function Navbar() {
           />
         </Link>
 
+
         {/* Navigation links (desktop only) */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex items-center space-x-6">
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`hover:underline transition-colors ${
-                pathname === href ? 'font-semibold underline' : ''
+              className={`nav-underline relative px-1 transition-colors ${
+                pathname === href ? 'font-semibold underline-active' : ''
               }`}
             >
               {label}
             </Link>
           ))}
+          {/* Contact Link styled like other nav links */}
+          <Link
+            href={contactHref}
+            className={`nav-underline relative px-1 transition-colors ${
+              pathname === contactHref ? 'font-semibold underline-active' : ''
+            }`}
+          >
+            {t('contact')}
+          </Link>
         </div>
 
         {/* Desktop: Language switcher and theme toggle */}
@@ -146,6 +158,16 @@ export default function Navbar() {
                       {label}
                     </Link>
                   ))}
+                  {/* Contact Link for mobile styled like other nav links */}
+                  <Link
+                    href={contactHref}
+                    onClick={handleMobileLinkClick}
+                    className={`text-lg hover:underline transition-colors py-2 ${
+                      pathname === contactHref ? 'font-semibold underline' : ''
+                    }`}
+                  >
+                    {t('contact')}
+                  </Link>
                 </div>
 
                 {/* Mobile: Language switcher and theme toggle */}

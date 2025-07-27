@@ -5,10 +5,30 @@
     "projects": "Projecten",
     "experiences": "Ervaringen",
     "resume": "CV",
+    "contact": "Contact",
     "theme": {
       "light": "Licht",
       "dark": "Donker"
     }
+  },
+  "contact": {
+    "title": "Contact Yannick",
+    "intro": "Neem gerust contact op voor samenwerking, vragen of gewoon om kennis te maken!",
+    "emailLabel": "E-mail:",
+    "email": "yannickdesiron@hotmail.com",
+    "linkedinLabel": "LinkedIn:",
+    "linkedin": "linkedin.com/in/yannick",
+    "locationLabel": "Locatie:",
+    "location": "Antwerpen, België",
+    "backToHome": "Terug naar Home",
+    "formTitle": "Stuur mij een bericht",
+    "formName": "Jouw naam",
+    "formNamePlaceholder": "Vul je naam in",
+    "formEmail": "Jouw e-mail",
+    "formEmailPlaceholder": "Vul je e-mailadres in",
+    "formMessage": "Bericht",
+    "formMessagePlaceholder": "Typ hier je bericht...",
+    "formSubmit": "Verstuur bericht"
   },
   "hero": {
     "title": "Hey, ik ben",
